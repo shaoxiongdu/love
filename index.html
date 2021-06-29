@@ -77,9 +77,8 @@
 </script>
 
 <div style="text-align:center;">
-    <p style="color: #AAAAAA;font-size: 17px" >小杜一直爱小赵 | 2021 版权所有 @ 杜少雄 保留所有权利    &nbsp;&nbsp;&nbsp;
-        <a  href='https://github.com/shaoxiongdu/LoveTree'  style="color:#AAAAAA;font-size: 17px" >GitHub开源地址</a>
-        <a  href='http:shaoxiongdu.cn'  style="color:#AAAAAA;font-size: 17px" >小杜技术博客</a>
+    <p style="color: #AAAAAA;font-size: 17px" >小杜一直爱小赵 | 2021 版权所有 @ 杜少雄♥赵文宇 保留所有权利    &nbsp;&nbsp;&nbsp;
+        <a  href='https://github.com/shaoxiongdu/love'  style="color:#AAAAAA;font-size: 17px" >GitHub</a>
     <p>
 </div>
 
@@ -237,8 +236,16 @@
         runAsync().start();
     })();
 
-    //自动播放音乐
-    document.getElementById("musicPlayButton").click();
+
+    function sleep(ms) {
+        return new Promise(resolve =>
+                setTimeout(resolve, ms)
+        )
+    }
+    //睡眠3s自动播放音乐
+    sleep(3000).then(()=>{
+        document.getElementById("musicPlayButton").click();
+    })
 </script>
 
 
