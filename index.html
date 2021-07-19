@@ -16,10 +16,7 @@
     <script type="text/javascript" src="./index_files/love.js" charset="utf-8"></script>
     <script type="text/javascript" src="./config.js"></script>
 
-    <script type="text/javascript" class="autoinsert" src="js/jquery-1.2.6.min.js"></script>
 
-
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <style type="text/css">
         <!--
         .STYLE1 {
@@ -29,6 +26,8 @@
     </style>
 </head>
 <body>
+
+
 
 <img src="https://ajlovechina.github.io/loveBalloon/static/music.png" id="musicPlayButton" style="position: fixed;z-index: 10001;top:10px;right:10px;" onclick="let m = document.querySelector('.song-audio-autoplay'); if (m.paused ) {m.play(); this.className = 'rotateImages'} else {m.pause(); this.className = ''}">
 <audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
@@ -56,6 +55,7 @@
             href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
             href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。
     </div>
+
     <div id="wrap">
         <div id="text">
             <div id="code">
@@ -66,20 +66,22 @@
 					</span>
             <div id="clock"></div>
         </div>
-        <canvas id="canvas" width="1100" height="680"></canvas>
+        <canvas id="canvas" width="776" height="480"></canvas>
     </div>
+
 
 </div>
 
 <script type="text/javascript">
 
     $('#code').html(config.lines.map(item => {
-        return `<span class="say">${item}</span><br><span class="say"> </span><br>`
+        return '<span class="say">${item}</span><br><span class="say"> </span><br>'
     }).reduce((a, b) => {
         return a + b;
     }))
     $("#clock-box-inside-text").html(`${config.names[0]}<span class="STYLE1">与</span> ${config.names[1]}<span class="STYLE1">已经相恋了</span>`)
 </script>
+
 
 <div style="text-align:center;">
     <p style="color: #AAAAAA;font-size: 17px" >小杜一直爱小赵 | 2021 版权所有 @ 杜少雄♥赵文宇 保留所有权利    &nbsp;&nbsp;&nbsp;
@@ -94,7 +96,6 @@
     jQuery(document).ready(function($) {
         $("body").click(function(e) {
             //随机选择文字
-
             var clickWord = config.clickWord;
 
             var a_idx = Math.floor((Math.random() * clickWord.length));
@@ -103,8 +104,9 @@
             var color2 = Math.floor((Math.random() * 255));
             var color3 = Math.floor((Math.random() * 255));
 
-            var $i = $("<span />").text(clickWord[a_idx]);
             a_idx = (a_idx + 1) % clickWord.length;
+            var $i = $(`<span/>`).text(clickWord[a_idx]);
+
             var x = e.pageX,
                 y = e.pageY;
             $i.css({　　　　　　//文字样式--------------------------
