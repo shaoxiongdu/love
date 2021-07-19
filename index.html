@@ -75,7 +75,7 @@
 <script type="text/javascript">
 
     $('#code').html(config.lines.map(item => {
-        return '<span class="say">${item}</span><br><span class="say"> </span><br>'
+        return `<span class="say">${item}</span><br><span class="say"> </span><br>`
     }).reduce((a, b) => {
         return a + b;
     }))
