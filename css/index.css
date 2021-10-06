@@ -1,0 +1,33 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-size: 85%;
+    background-image: url("../static/images/background.jpg");
+    background-size: auto;
+    margin: 0;
+    color: #fff;
+}
+
+h2 {
+    font-size: 300%;
+    font-weight: 500;
+
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+.timer {
+    font-size: 180%;
+    line-height: 1.5;
+    margin: 1em 0;
+}
+
+.timer b {
+    color: rgb(253, 99, 125);
+}
